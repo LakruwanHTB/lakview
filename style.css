@@ -1,132 +1,82 @@
-/* Google Fonts වලින් ලස්සන Font එකක් ගමු */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* Navigation Menu එක ලස්සන කිරීම */
+nav {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px 0;
+    backdrop-filter: blur(5px);
 }
 
-body {
-    background: #0f0c29;  /* ලස්සන Dark Gradient පසුබිමක් */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    color: #fff;
-    line-height: 1.6;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-header {
-    padding: 60px 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px); /* වීදුරු වැනි පෙනුම */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.logo {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #d4af37; /* Gold Color */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    position: relative;
 }
 
-.logo span {
-    color: #fff;
+/* Menu එක උඩට Mouse එක ගෙනියද්දී ලස්සන ඉරක් වැටීම */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s;
 }
 
-/* Music Section */
+nav ul li a:hover {
+    color: #d4af37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Play Music Button එකට Epic Glow පෙනුමක් දීම */
 .music-container {
-    margin: 30px 0;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
 }
 
 #musicBtn {
     background: linear-gradient(45deg, #d4af37, #f2d06b);
     border: none;
-    padding: 12px 30px;
+    padding: 15px 40px;
     border-radius: 50px;
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-    transition: 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); /* Glow Effect */
+    transition: 0.5s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #musicBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+    background: linear-gradient(45deg, #ffffff, #d4af37);
 }
 
-/* Wadan Cards Section */
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 20px;
-}
-
-.card {
-    width: 380px;
-    height: 450px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    transition: 0.5s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.card:hover {
-    transform: scale(1.03); /* Card එක ලොකු වීම */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-}
-
-/* Dark Overlay */
-.overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
-    width: 100%;
-    height: 100%;
-    padding: 40px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* අකුරු යටට වෙන්න */
-    text-align: left;
-}
-
+/* Card වල අකුරු තවත් පැහැදිලි කිරීමට */
 .overlay p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: #efefef;
-}
-
-.author {
-    font-size: 0.9rem;
-    color: #d4af37;
-    margin-bottom: 20px;
-    display: block;
-}
-
-/* WhatsApp Button Modern */
-.wa-button {
-    background: #25d366;
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 12px;
-    text-align: center;
+    font-family: 'Iskoola Pota', 'Arial', sans-serif; /* සිංහල අකුරු වලට ගැලපෙන ලෙස */
     font-weight: 600;
-    transition: 0.3s;
-}
-
-.wa-button:hover {
-    background: #128c7e;
-}
-
-footer {
-    padding: 40px;
-    opacity: 0.7;
-    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
