@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark Background */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #000000;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 3px solid #d4af37; /* Gold Line */
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #d4af37; /* Gold color for View */
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    background: #222;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Content Area */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Wadan Cards */
+.card {
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-top: 4px solid #d4af37;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.author {
+    display: block;
+    font-size: 0.9rem;
+    color: #d4af37;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    font-size: 0.9rem;
+    color: #777;
+}
+/* Image Style */
+.wadan-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* WhatsApp Button Style */
+.wa-button {
+    display: block;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.wa-button:hover {
+    background-color: #128C7E;
+}
