@@ -21,6 +21,14 @@
         </ul>
     </nav>
 
+    <div class="music-container">
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick="toggleMusic()" id="musicBtn">🎵 Play Music</button>
+    </div>
+
     <section class="main-content">
         
         <div class="card">
@@ -35,20 +43,29 @@
             <span class="author">- LakView -</span>
             <a href="https://api.whatsapp.com/send?text=තනිවම ගමනක් යන්න පුරුදු වෙන්න. - LakView" target="_blank" class="wa-button">WhatsApp Share</a>
         </div>
-<div class="card image-card" style="background-image: url('p.c.jpg');">
-    <div class="overlay">
-        <p>"සිතුවිලි ලස්සන නම් ජීවිතයත් ලස්සනයි."</p>
-        <span class="author">- LakView -</span>
-        <a href="#" class="wa-button">WhatsApp Share</a>
-    </div>
-</div>
+
     </section>
 
     <footer>
         <p>&copy; 2026 LakView. Created with ❤️</p>
     </footer>
 
-</body>
+    <script>
+        var music = document.getElementById("bgMusic");
+        var btn = document.getElementById("musicBtn");
 
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "⏸️ Pause Music";
+            } else {
+                music.pause();
+                btn.innerHTML = "🎵 Play Music";
+            }
+        }
+    </script>
+
+</body>
 </html>
+
 
