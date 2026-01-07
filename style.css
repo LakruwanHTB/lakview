@@ -1,129 +1,94 @@
-/* General Styles */
+/* General Setup */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Dark Background */
+    background-color: #121212;
     color: #ffffff;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-/* Header */
 header {
-    background: #000000;
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 3px solid #d4af37; /* Gold Line */
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color: #d4af37;
 }
 
 .logo span {
-    color: #d4af37; /* Gold color for View */
+    color: #ffffff;
 }
 
-header p {
-    font-size: 1.1rem;
-    color: #cccccc;
-    margin-top: 10px;
+/* Music Button Style */
+.music-container {
+    margin: 20px 0;
 }
 
-/* Navigation */
-nav {
-    background: #222;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #d4af37;
-    text-decoration: none;
+#musicBtn {
+    background: #d4af37;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
     font-weight: bold;
+    color: #000;
+    transition: 0.3s;
 }
 
-/* Content Area */
+/* Card Design with Background Image Support */
 .main-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 40px 20px;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Wadan Cards */
 .card {
-    background: #2c2c2c;
-    border-radius: 10px;
+    width: 350px;
+    min-height: 300px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Dark Overlay to make text readable over images */
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* 60% black layer */
+    width: 100%;
     padding: 30px;
-    margin: 15px;
-    width: 300px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    border-top: 4px solid #d4af37;
-    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card p {
+.overlay p {
     font-size: 1.2rem;
-    font-style: italic;
+    line-height: 1.6;
+    color: #fff;
     margin-bottom: 20px;
-    color: #f0f0f0;
 }
 
 .author {
-    display: block;
-    font-size: 0.9rem;
     color: #d4af37;
-    text-align: right;
     font-weight: bold;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    font-size: 0.9rem;
-    color: #777;
-}
-/* Image Style */
-.wadan-img {
-    width: 100%;
-    border-radius: 8px;
     margin-bottom: 15px;
 }
 
-/* WhatsApp Button Style */
 .wa-button {
-    display: block;
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #25d366;
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin-top: 15px;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-weight: bold;
     font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.wa-button:hover {
-    background-color: #128C7E;
 }
